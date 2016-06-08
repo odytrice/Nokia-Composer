@@ -56,20 +56,21 @@
   <ItemGroup>
     <None Include="App.config" />
     <Compile Include="AssemblyInfo.fs" />
-    <Compile Include="Quicksort.fs" />
-    <Compile Include="TwoNumbers.fs" />
-    <Compile Include="Printer.fs" />
     <Compile Include="Program.fs" />
-    <None Include="fsidemo.fsx" />
-    <None Include="function_examples.fsx" />
     <Content Include="packages.config" />
-    <None Include="currying.fsx" />
-    <None Include="recursive_functions.fsx" />
-    <None Include="pipe_forward.fsx" />
-    <None Include="pipe_backward.fsx" />
-    <None Include="function_composition.fsx" />
-    <None Include="signal_generator.fsx" />
-    <None Include="wave_packer.fsx" />
+    <Compile Include="Intro\Printer.fs" />
+    <Compile Include="Intro\TwoNumbers.fs" />
+    <None Include="Intro\fsidemo.fsx" />
+    <Compile Include="Intro\Quicksort.fs" />
+    <None Include="Functions\function_examples.fsx" />
+    <None Include="Functions\currying.fsx" />
+    <None Include="Functions\recursive_functions.fsx" />
+    <None Include="Functions\pipe_forward.fsx" />
+    <None Include="Functions\pipe_backward.fsx" />
+    <None Include="Functions\function_composition.fsx" />
+    <None Include="Functions\signal_generator.fsx" />
+    <None Include="Functions\wave_packer.fsx" />
+    <None Include="Data\strings.fsx" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FSharp.Charting">
