@@ -1,7 +1,4 @@
-﻿#I "../../packages/FParsec.1.0.2/lib/net40-client"
-
-#r "FParsec.dll"
-#r "FParsecCS.dll"
+﻿module Parsing
 
 open FParsec
 

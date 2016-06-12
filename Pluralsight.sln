@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Pluralsight", "Pluralsight\Pluralsight.fsproj", "{08BD4E58-F9BA-4874-8108-F09318F757F4}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Composer", "Composer\Composer.fsproj", "{E8A799E5-5B20-4D50-9B15-A322AECA75B4}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Composer.Tests", "Composer.Tests\Composer.Tests.fsproj", "{D1C22227-D3A2-4EF6-958B-CC3B3E6B9D0A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{08BD4E58-F9BA-4874-8108-F09318F757F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08BD4E58-F9BA-4874-8108-F09318F757F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08BD4E58-F9BA-4874-8108-F09318F757F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8A799E5-5B20-4D50-9B15-A322AECA75B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8A799E5-5B20-4D50-9B15-A322AECA75B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8A799E5-5B20-4D50-9B15-A322AECA75B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8A799E5-5B20-4D50-9B15-A322AECA75B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1C22227-D3A2-4EF6-958B-CC3B3E6B9D0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1C22227-D3A2-4EF6-958B-CC3B3E6B9D0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1C22227-D3A2-4EF6-958B-CC3B3E6B9D0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1C22227-D3A2-4EF6-958B-CC3B3E6B9D0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,14 +5,14 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>08bd4e58-f9ba-4874-8108-f09318f757f4</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Pluralsight</RootNamespace>
-    <AssemblyName>Pluralsight</AssemblyName>
+    <ProjectGuid>e8a799e5-5b20-4d50-9b15-a322aeca75b4</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Composer</RootNamespace>
+    <AssemblyName>Composer</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFSharpCoreVersion>4.4.0.0</TargetFSharpCoreVersion>
-    <Name>Pluralsight</Name>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Name>Composer</Name>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,9 +22,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DocumentationFile>bin\Debug\Pluralsight.XML</DocumentationFile>
-    <Prefer32Bit>true</Prefer32Bit>
+    <DocumentationFile>bin\Debug\Composer.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -33,9 +31,7 @@
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DocumentationFile>bin\Release\Pluralsight.XML</DocumentationFile>
-    <Prefer32Bit>true</Prefer32Bit>
+    <DocumentationFile>bin\Release\Composer.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
@@ -54,36 +50,10 @@
   </Choose>
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
-    <None Include="App.config" />
-    <Compile Include="AssemblyInfo.fs" />
     <Content Include="packages.config" />
-    <Compile Include="Intro\Printer.fs" />
-    <Compile Include="Intro\TwoNumbers.fs" />
-    <None Include="Intro\fsidemo.fsx" />
-    <Compile Include="Intro\Quicksort.fs" />
-    <None Include="Functions\function_examples.fsx" />
-    <None Include="Functions\currying.fsx" />
-    <None Include="Functions\recursive_functions.fsx" />
-    <None Include="Functions\pipe_forward.fsx" />
-    <None Include="Functions\pipe_backward.fsx" />
-    <None Include="Functions\function_composition.fsx" />
-    <None Include="Functions\signal_generator.fsx" />
-    <None Include="Functions\wave_packer.fsx" />
-    <None Include="Data\strings.fsx" />
-    <None Include="Data\string_indexing.fsx" />
-    <None Include="Data\Core.String.fsx" />
-    <None Include="Data\ComposerParsing.fsx" />
-
-    <None Include="Structure\RequireQualifiedAccess.fsx" />
-    <Compile Include="Structure\Namespaces.fs" />
-    <Compile Include="Structure\Modules.fs" />
-    <Compile Include="Structure\ModuleClient.fs" />
-    
-    <Compile Include="Structure\Example\A2.fs" />
-    <Compile Include="Structure\Example\B2.fs" />
-
-    <None Include="PlayGround.fsx" />
-    <Compile Include="Program.fs" />
+    <Compile Include="Parsing.fs" />
+    <Compile Include="SignalGenerator.fs" />
+    <Compile Include="WavePacker.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FParsec">
@@ -104,6 +74,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Numerics" />
   </ItemGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

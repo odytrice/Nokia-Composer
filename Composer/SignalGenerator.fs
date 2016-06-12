@@ -1,4 +1,4 @@
-﻿#load "../../packages/FSharp.Charting.0.90.14/FSharp.Charting.fsx"
+﻿module SignalGenerator
 
 open System
 open FSharp.Charting
@@ -21,4 +21,4 @@ let generateSamples milliseconds frequency =
     Seq.map toAmplitude requiredSamples
 
 let points = generateSamples 150.0 440.0
-points |> Chart.Line
+points |> Chart.Line |> ignore
