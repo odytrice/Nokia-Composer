@@ -73,15 +73,16 @@
     <None Include="Data\string_indexing.fsx" />
     <None Include="Data\Core.String.fsx" />
     <None Include="Data\ComposerParsing.fsx" />
-
-    <None Include="Structure\RequireQualifiedAccess.fsx" />
+    <Compile Include="Structure\Example\A2.fs" />
+    <Compile Include="Structure\Example\B2.fs" />
     <Compile Include="Structure\Namespaces.fs" />
     <Compile Include="Structure\Modules.fs" />
     <Compile Include="Structure\ModuleClient.fs" />
-    
-    <Compile Include="Structure\Example\A2.fs" />
-    <Compile Include="Structure\Example\B2.fs" />
-
+    <None Include="Structure\require_qualified_access.fsx" />
+    <None Include="Structure\trywith.fsx" />
+    <None Include="Structure\tryfinally.fsx" />
+    <None Include="Structure\customexceptions.fsx" />
+    <None Include="Structure\dotnetexceptions.fsx" />
     <None Include="PlayGround.fsx" />
     <Compile Include="Program.fs" />
   </ItemGroup>

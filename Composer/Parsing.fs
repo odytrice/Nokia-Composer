@@ -108,3 +108,10 @@ test ptoken "16.-"
 test ptoken "32.#d3"
 test pscore "32.#d3 8a1 16-"
 test pscore "2- 16a1 16- 16a1 16- 8a1 16- 4a2 16g2 16- 2g2 16- 4- 8- 16g2 16- 16g2 16- 16g2 8g2 16- 4c2 16#a1 16- 4a2 8g2 4f2 4g2 8d2 8f2 16- 16f2 16- 16c2 8c2 16- 4a2 8g2 16f2 16- 8f2 16- 16c2 16- 4g2 4f2"
+
+
+let parse score =
+    match run pscore score with
+    | Failure(errorMsg,_,_)-> Choice1Of2(errorMsg)
+    | Success(result,_,_) -> Choice2Of2(result)
+    
