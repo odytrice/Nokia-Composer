@@ -9,6 +9,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Composer", "Composer\Compos
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Composer.Tests", "Composer.Tests\Composer.Tests.fsproj", "{D1C22227-D3A2-4EF6-958B-CC3B3E6B9D0A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpLibrary", "CSharpLibrary\CSharpLibrary.csproj", "{8E2FDB17-3287-4041-81A7-6D04A0B75DDD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D1C22227-D3A2-4EF6-958B-CC3B3E6B9D0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1C22227-D3A2-4EF6-958B-CC3B3E6B9D0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1C22227-D3A2-4EF6-958B-CC3B3E6B9D0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E2FDB17-3287-4041-81A7-6D04A0B75DDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E2FDB17-3287-4041-81A7-6D04A0B75DDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E2FDB17-3287-4041-81A7-6D04A0B75DDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E2FDB17-3287-4041-81A7-6D04A0B75DDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
