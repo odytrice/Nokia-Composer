@@ -55,6 +55,7 @@
     <Content Include="packages.config" />
     <Compile Include="ParsingTests.fs" />
     <Content Include="App.config" />
+    <Compile Include="AssemberTests.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FParsec">

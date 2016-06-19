@@ -56,6 +56,7 @@ chartQuery |> Chart.Line
 
 
 //Read AppSettings using Type Providers
+//Makes it possible to convert possible runtime errors to Compile time Errors
 #r @"..\..\packages\FSharp.Configuration.0.6.1\lib\net40\FSharp.Configuration.dll"
 open FSharp.Configuration
 open System.IO

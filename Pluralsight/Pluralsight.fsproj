@@ -71,8 +71,8 @@
     <None Include="Functions\wave_packer.fsx" />
     <None Include="Data\strings.fsx" />
     <None Include="Data\string_indexing.fsx" />
-    <None Include="Data\Core.String.fsx" />
-    <None Include="Data\ComposerParsing.fsx" />
+    <None Include="Data\core.string.fsx" />
+    <None Include="Data\composer_parsing.fsx" />
     <Compile Include="Structure\Example\A2.fs" />
     <Compile Include="Structure\Example\B2.fs" />
     <Compile Include="Structure\Namespaces.fs" />
