@@ -1,6 +1,6 @@
 ﻿(*
-
-
+    This module coordinates the score parser, signal generator 
+    and wave packer to convert a score into an audio file.
 *)
 
 module Assembler

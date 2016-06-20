@@ -1,0 +1,78 @@
+﻿body {
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+.lCol {
+    background-position:20px -230px;
+    background-repeat:no-repeat;
+    background-image: url(/Content/3310.jpg);
+    background-size:400px; 
+    width:500px;height:800px;
+    float:left;
+}
+
+.rCol {
+    float:left; width: 400px;
+}
+
+.score {
+    position:absolute;
+    left: 86px;
+    top:31px;
+    width: 262px;
+    height: 183px;
+    border: 0;
+    background: transparent;
+    font-size:16px;
+    font-weight:bolder;
+    font-family: 'Press Start 2P', cursive;
+}
+
+h1 {font-family: 'Press Start 2P', cursive;}
+
+textarea {
+    border: 0;
+    background: transparent /* the important bit */
+}
+textarea:focus, input:focus{
+    outline: 0;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
