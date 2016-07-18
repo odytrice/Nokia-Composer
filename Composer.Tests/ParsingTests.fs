@@ -12,12 +12,12 @@ type ``When parsing a simple score`` () =
         let result = parse score
 
         let assertFirstToken token = 
-            Assert.AreEqual({ fraction = ThirtySecondth; extended = true}, token.length)
-            Assert.AreEqual(Tone(DSharp,Three) , token.sound)
+            Assert.AreEqual({ Fraction = ThirtySecondth; Extended = true}, token.Length)
+            Assert.AreEqual(Tone(DSharp,Three) , token.Sound)
 
         let assertSecondToken token = 
-            Assert.AreEqual({ fraction = Sixteenth; extended = false },token.length)
-            Assert.AreEqual(Rest, token.sound)
+            Assert.AreEqual({ Fraction = Sixteenth; Extended = false },token.Length)
+            Assert.AreEqual(Rest, token.Sound)
 
         match result with
         | Choice1Of2 errorMsg -> Assert.Fail(errorMsg)

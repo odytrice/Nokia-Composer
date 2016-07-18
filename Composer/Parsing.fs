@@ -4,11 +4,11 @@ open FParsec
 
 //Domain
 type MeasureFraction = Full | Half | Quarter | Eighth | Sixteenth | ThirtySecondth
-type Length = {fraction: MeasureFraction; extended: bool}
+type Length = {Fraction: MeasureFraction; Extended: bool}
 type Note = A | ASharp | B | C | CSharp | D | DSharp | E | F | FSharp | G | GSharp
 type Octave = One | Two | Three
 type Sound = Rest | Tone of Note * Octave
-type Token = {length: Length; sound: Sound}
+type Token = {Length: Length; Sound: Sound}
 
 
 // Test Function
@@ -22,7 +22,7 @@ let aspiration = "32.#d3"
 /// 'Choice Combinator' Combines two parsers such that if one fails, it will try the other
 let combine = (<|>)
 
-/// Try parse 2 and if it fails try 32, 16, 8, 4, 2, 1
+/// Try parse 32 and if it fails try 16, 8, 4, 2, 1
 let pmeasurefraction = 
     (stringReturn "32" ThirtySecondth)
     <|> (stringReturn "16" Sixteenth)
@@ -39,7 +39,7 @@ let plength =
     pipe2 
         pmeasurefraction 
         pextendedparser 
-        (fun f e -> {fraction = f; extended = e})
+        (fun f e -> {Fraction = f; Extended = e})
 
 /// Applies function to parser and returns new parser
 let pipe = (|>>)
@@ -95,7 +95,7 @@ let ptone = pipe2 pnote poctave (fun n o -> Tone(n,o))
 let prest = stringReturn "-" Rest
 
 /// Parses a complete token - e.g. 32.#d3 16.- 8a1 a token is a length followed by a tone or a rest
-let ptoken = pipe2 plength (prest <|> ptone) (fun l s -> {length = l; sound = s} )
+let ptoken = pipe2 plength (prest <|> ptone) (fun l s -> {Length = l; Sound = s} )
 
 /// Parses tokens separated by spaces
 let pscore = sepBy ptoken (pstring " ")
@@ -127,7 +127,7 @@ let durationFromToken token =
     let secondsPerBeat = 60./bpm
 
     let ratio = 
-        match token.length.fraction with
+        match token.Length.Fraction with
             | Full -> 4.0
             | Half -> 2.0
             | Quarter -> 1.0
@@ -135,7 +135,7 @@ let durationFromToken token =
             | Sixteenth -> 0.25
             | ThirtySecondth -> 0.125
 
-    ratio * 1000.0 * secondsPerBeat * (if token.length.extended then 1.5 else 1.0)
+    ratio * 1000.0 * secondsPerBeat * (if token.Length.Extended then 1.5 else 1.0)
 
 let semitonesBetween lower upper = 
     let noteSequence = [A; ASharp; B; C; CSharp; D; DSharp; E; F; FSharp; G; GSharp]
